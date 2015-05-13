@@ -1,34 +1,30 @@
 var num1 = document.querySelector("#num_one");
-var num2 = document.querySelector("#num_two");
+var num2 = document.querySelector("#num_one");
 var calc = document.querySelector("#calculateBtn");
 var answer = document.querySelector("#answer");
 var add = document.querySelector(".add");
 var subtract = document.querySelector(".subtract");
 var multiply = document.querySelector(".multiply");
 var divide = document.querySelector(".divide");
+var Num1;
 var operator;
 
-  add.onclick = function() {
+add.onclick = function() {
+  number1 = Num1
   operator = "a";
-  console.log("add here");
+  var num2 = document.querySelector("#num_two");
 }
 
 subtract.onclick = function() {
   operator = "s";
-    console.log("sub here");
-
 }
 
 multiply.onclick = function() {
   operator = "m";
-    console.log("mult here");
-
 }
 
 divide.onclick = function() {
   operator = "d";
-    console.log("div here");
-
 }
 
 var add1 = function(num1, num2) {
@@ -54,6 +50,7 @@ var divide1 = function(num1, num2) {
 
 
 calc.onclick = function() {
+
   var box1 = Number(num1.value);
   var box2 = Number(num2.value);
 

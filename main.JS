@@ -1,58 +1,59 @@
-var num1 = document.querySelector("#num_one");
-var num2 = document.querySelector("#num_one");
 var calc = document.querySelector("#calculateBtn");
 var answer = document.querySelector("#answer");
 var add = document.querySelector(".add");
 var subtract = document.querySelector(".subtract");
 var multiply = document.querySelector(".multiply");
 var divide = document.querySelector(".divide");
-var Num1;
+var value1;
+var value2;
 var operator;
 
 add.onclick = function() {
-  number1 = Num1
+  value1 = document.querySelector("#input").value;
   operator = "a";
-  var num2 = document.querySelector("#num_two");
 }
 
 subtract.onclick = function() {
+  value1 = document.querySelector("#input").value;
   operator = "s";
 }
 
 multiply.onclick = function() {
+  value1 = document.querySelector("#input").value;
   operator = "m";
 }
 
 divide.onclick = function() {
+  value1 = document.querySelector("#input").value;
   operator = "d";
 }
 
-var add1 = function(num1, num2) {
-  var sum = num1 + num2;
+var add1 = function(box1, box2) {
+  var sum = box1 + box2;
   answer.innerHTML = sum.toString();
   }
 
-var subtract1 = function(num1, num2) {
-  var diff = num1 - num2;
+var subtract1 = function(box1, box2) {
+  var diff = box1 - box2;
   answer.innerHTML = diff.toString();
   }
 
-var multiply1 = function(num1, num2) {
-  var product = num1 * num2;
+var multiply1 = function(box1, box2) {
+  var product = box1 * box2;
   answer.innerHTML = product.toString();
   }
 
-var divide1 = function(num1, num2) {
-  var quotient = num1 / num2;
+var divide1 = function(box1, box2) {
+  var quotient = box1 / box2;
   answer.innerHTML = quotient.toString();
   }
 
 
 
 calc.onclick = function() {
-
-  var box1 = Number(num1.value);
-  var box2 = Number(num2.value);
+  value2 = document.querySelector("#input").value;
+  var box1 = Number(value1);
+  var box2 = Number(value2);
 
   switch (operator) {
     case "a":
